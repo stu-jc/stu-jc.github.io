@@ -1,59 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Joshua Chelashaw</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background-color: #222;
-      color: #fff;
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    section {
-      padding: 2rem 1rem;
-      max-width: 800px;
-      margin: auto;
-    }
-    footer {
-      background-color: #eee;
-      text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-    }
-    a {
-      color: #0066cc;
-      text-decoration: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua Chelashaw</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Joshua Chelashaw</h1>
-    <p>Welcome to my personal website</p>
-  </header>
+    <div class="container">
+        <header class="intro">
+            <h1>Joshua Chelashaw</h1>
+            <p>A curious creator. Interested in mathematics, networking engineering and finance. Seeking to share knowledge and collaborate on innovative projects.</p>
+        </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>Hello! I am Joshua Chelashaw. This is a space where I share my work, ideas, and ways to get in touch. I am passionate about technology, creativity, and building meaningful projects.</p>
-  </section>
+        <main>
+            <section class="section">
+                <h2>Projects</h2>
+                <ul class="projects">
+                    <li class="project">
+                        <div class="project-title">me.com - My Personal Website
+                        </div>
+                        <p class="project-description">A minimal, responsive portfolio site built with clean HTML, CSS, and modern web standards. Features dark mode support and mobile-first design.</p>
+                    </li>
+                    <li class="project">
+                        <div class="project-title"><a href="https://github.com/stu-jc/financial-health-factor-analysis">Factor Analysis Report</a></div>
+                        <p class="project-description">Python (NumPy, pandas), Jupyter, LaTeX • May 2024<br>
+                        Comprehensive statistical analysis evaluating relationships between factors and stock returns using information coefficient analysis. Applied machine learning with decision trees and assessed forecasting accuracy using 10-fold cross-validation. Produced professional-quality report with clean, well-documented code.</p>
+                    </li>
+                    <li class="project">
+                        <div class="project-title"><a href="https://github.com/stu-jc/travel-agency-gui">Travel Agency GUI</a></div>
+                        <p class="project-description">Python (tkinter), PyCharm • November 2023<br>
+                        Desktop GUI application following MVC architecture and OOP principles. Features secure login, data filtering/management, and robust error handling. Successfully navigated macOS compatibility challenges and time constraints.</p>
+                    </li>
+                </ul>
+            </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>If you would like to connect, feel free to email me at <a href="mailto:youremail@example.com">youremail@example.com</a>.</p>
-    <!-- Replace with your actual email -->
-  </section>
+            <section class="section">
+                <h2>Currently</h2>
+                <p>Learning, learning and learning. 
+                    
+                    Balancing a role at NEXTGEN Distribution within the Systems team, with 4th year studies in my double degree of Software Engineering & Finance Science. Excited to share more about the journey, lifestyle and intersect of these fields. 
 
-  <footer>
-    <p>&copy; 2025 Joshua Chelashaw. All rights reserved.</p>
-  </footer>
+                    I'll use this space to share my wins, failures, projects, and experiences, as I explore my curiosities.
+
+                    Cheers,
+                    joshua                
+                    </p>
+            </section>
+        </main>
+
+        <footer>
+            <div class="contact">
+                <h2>Connect</h2>
+                <p>Get in touch with <a href="mailto:me@joshuachelashaw.com">me@joshuachelashaw.com</a></p>
+            </div>
+
+            <div class="footer">
+                <p>&copy; 2025 Joshua Chelashaw</p>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
