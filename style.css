@@ -37,6 +37,48 @@ p {
     font-size: 1rem;
 }
 
+.header {
+    margin-bottom: 2rem;
+}
+
+.nav {
+    display: flex;
+    align-items: baseline;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.nav-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.nav-title:hover {
+    color: #0066cc;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: #666;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #0066cc;
+}
+
 .intro {
     margin-bottom: 3rem;
 }
@@ -114,8 +156,20 @@ a:hover {
         padding: 20px 15px;
     }
     
-    h1 {
+    .nav {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    .nav-title {
         font-size: 2rem;
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+    
+    .nav-links {
+        gap: 1rem;
     }
     
     .container {
@@ -132,6 +186,22 @@ a:hover {
 
     h1, h2, .project-title, .contact a {
         color: #fff;
+    }
+
+    .nav-title {
+        color: #fff;
+    }
+
+    .nav-title:hover {
+        color: #0066cc;
+    }
+
+    .nav-link {
+        color: #ccc;
+    }
+
+    .nav-link:hover {
+        color: #0066cc;
     }
 
     p, .project-description {
