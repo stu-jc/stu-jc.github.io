@@ -122,6 +122,10 @@ a:hover {
     color: var(--color-accent);
 }
 
+.nav-title.active {
+    color: var(--color-accent);
+}
+
 .nav-links {
     display: flex;
     gap: var(--space-lg);
@@ -144,6 +148,13 @@ a:hover {
 
 .nav-link:hover {
     color: var(--color-accent);
+}
+
+.nav-link.active {
+    color: var(--color-accent);
+    font-weight: var(--font-weight-medium);
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 2px;
 }
 
 .nav-link-icon {

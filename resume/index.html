@@ -14,9 +14,9 @@
                 <a href="../" class="nav-title">Joshua Chelashaw</a>          
                 <div class="nav-links">
                 <a href="https://github.com/stu-jc" class="nav-link">Github</a>
-                <a href="/resume/" class="nav-link">Resume</a> 
-                <a href="/placeholder/" class="nav-link">Projects</a>
-                <a href="/placeholder/" class="nav-link">Blog</a>
+                <a href="../resume/" class="nav-link">Resume</a> 
+                <a href="../projects/" class="nav-link">Projects</a>
+                <a href="../placeholder/" class="nav-link">Blog</a>
                 <a href="mailto:me@joshuachelashaw.com" class="nav-link">Email</a> 
                 <a href="https://linkedin.com/in/joshuachelashaw" class="nav-link">LinkedIn</a>
                 </div>
@@ -154,5 +154,27 @@
             </div>
         </footer>
     </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            
+            // Handle different path scenarios
+            if (currentPath.includes('/resume/') && href.includes('resume')) {
+                link.classList.add('active');
+            } else if (currentPath.includes('/projects/') && href.includes('projects')) {
+                link.classList.add('active');
+            } else if (currentPath.includes('/placeholder/') && href.includes('placeholder')) {
+                link.classList.add('active');
+            } else if ((currentPath === '/' || currentPath === '/stu-jc.github.io/') && href === '../') {
+                link.classList.add('active');
+            }
+        });
+    });
+    </script>
 </body>
 </html>

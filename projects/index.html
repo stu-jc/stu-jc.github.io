@@ -3,34 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joshua Chelashaw</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Coming Soon - Joshua Chelashaw</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <div class="container">
+     <div class="container">
         <header class="header">
             <nav class="nav">
-                <a href="./" class="nav-title">Joshua Chelashaw</a>          
+                <a href="../" class="nav-title">Joshua Chelashaw</a>          
                 <div class="nav-links">
                 <a href="https://github.com/stu-jc" class="nav-link">Github</a>
-                <a href="resume/" class="nav-link">Resume</a> 
-                <a href="projects/" class="nav-link">Projects</a>
-                <a href="placeholder/" class="nav-link">Blog</a>
+                <a href="../resume/" class="nav-link">Resume</a> 
+                <a href="../projects/" class="nav-link">Projects</a>
+                <a href="../placeholder/" class="nav-link">Blog</a>
                 <a href="mailto:me@joshuachelashaw.com" class="nav-link">Email</a> 
                 <a href="https://linkedin.com/in/joshuachelashaw" class="nav-link">LinkedIn</a>
                 </div>
             </nav>
         </header>
 
-        <section class="intro">
-            <p>A curious creator. Interested in mathematics, networking engineering and finance. Seeking to share knowledge and collaborate on innovative projects.</p>
-        </section>
-
+        
         <main>
             <section class="section">
-                <h2>Projects</h2>
                 <ul class="projects">
+                    <li class="project">
+                        <div class="project-title"> me.com - My Personal Website
+                        </div>
+                        <p class="project-description">A minimalistic, beautiful site. Currently under construction.</p>
+                    </li>
                     <li class="project">
                         <div class="project-title"><a href="https://github.com/DoMessWithProfile/GridCharge">GridCharge</a></div>
                         <p class="project-description">iOS Application developed in Swift. <br>
@@ -42,6 +42,11 @@
                         Comprehensive statistical analysis evaluating relationships between factors and stock returns using information coefficient analysis. Applied machine learning with decision trees and assessed forecasting accuracy using 10-fold cross-validation. Produced professional-quality report with clean, well-documented code.</p>
                     </li>
                     <li class="project">
+                        <div class="project-title"><a href="https://github.com/stu-jc/travel-agency-gui">Travel Agency GUI</a></div>
+                        <p class="project-description">Python (tkinter), PyCharm • November 2023<br>
+                        Desktop GUI application following MVC architecture and OOP principles. Features secure login, data filtering/management, and robust error handling. Successfully navigated macOS compatibility challenges and time constraints.</p>
+                    </li>
+                    <li class="project">
                         <div class="project-title"><a href="placeholder.html">Ruigu Rentals</a></div>
                         <p class="project-description">PHP, JavaScript, MySQL • Full-Stack Web Development<br>
                         Luxury car rental platform with dynamic database integration. Built robust backend architecture using MySQL and developed interactive frontend features with PHP and JavaScript.</p>
@@ -49,28 +54,13 @@
                 </ul>
             </section>
 
-            <section class="section">
-                <h2>Currently</h2>
-                <p>Learning, learning and learning. 
-
-                    Balancing an IT Analyst role at <a href="https://nextgen.group/">NEXTGEN</a>, with 4th year studies in my double degree of Software Engineering & Finance Science. Excited to share more about the journey, lifestyle and intersect of these fields. 
-                    <br>
-                    <br>
-                    I'll use this space to share my wins, failures, projects, and experiences, as I explore my curiosities.
-                    <br>
-        
-                    <p>Cheers,<br>joshua</p>               
-                    </p>
-            </section>
-
-        <div class="contact">
-        <h2>Connect</h2>
-        <p>Get in touch with <a href="mailto:me@joshuachelashaw.com">me@joshuachelashaw.com</a></p>
-        </div>
         </main>
 
         <footer>
-
+            <div class="contact">
+                <h2>Connect</h2>
+                <p>Get in touch with <a href="mailto:josh@joshuachelashaw.com">josh@joshuachelashaw.com</a></p>
+            </div>
 
             <div class="footer">
                 <p>&copy; 2025 Joshua Chelashaw</p>
@@ -86,18 +76,15 @@
         navLinks.forEach(link => {
             const href = link.getAttribute('href');
             
-            // Handle different path scenarios
-            if (currentPath.includes('/resume/') && href.includes('resume')) {
-                link.classList.add('active');
-            } else if (currentPath.includes('/projects/') && href.includes('projects')) {
+            // Handle different path scenarios with precise matching
+            if (currentPath.includes('/projects/') && href.includes('projects') && !href.includes('placeholder')) {
                 link.classList.add('active');
             } else if (currentPath.includes('/placeholder/') && href.includes('placeholder')) {
                 link.classList.add('active');
-            } else if ((currentPath === '/' || currentPath === '/stu-jc.github.io/' || currentPath.endsWith('/index.html')) && 
-                       (href === './' || href === 'index.html')) {
-                // This is the home page
-                const homeLink = document.querySelector('.nav-title');
-                if (homeLink) homeLink.classList.add('active');
+            } else if (currentPath.includes('/resume/') && href.includes('resume')) {
+                link.classList.add('active');
+            } else if ((currentPath === '/' || currentPath === '/stu-jc.github.io/' || currentPath.endsWith('/stu-jc.github.io/')) && href === '../') {
+                link.classList.add('active');
             }
         });
     });
