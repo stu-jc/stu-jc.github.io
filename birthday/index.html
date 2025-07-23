@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua Chelashaw</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="nav">
+                <a href="../" class="nav-title">Joshua Chelashaw</a>          
+                <div class="nav-links">
+                <a href="https://github.com/stu-jc" class="nav-link">Github</a>
+                <a href="../resume/" class="nav-link">Resume</a> 
+                <a href="../projects/" class="nav-link">Projects</a>
+                <a href="../placeholder/" class="nav-link">Blog</a>
+                <a href="mailto:me@joshuachelashaw.com" class="nav-link">Email</a> 
+                <a href="https://linkedin.com/in/joshuachelashaw" class="nav-link">LinkedIn</a>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="birthday-hero">
+                <h1>You're Invited!</h1>
+                <h2>joshua's birthday cookout</h2>
+                <p class="birthday-description">Come celebrate another year of life and laughter!</p>
+            </section>
+
+            <section class="section">
+                <h1>RSVP</h1>
+                <p>Please let me know if you can make it by filling out the form below:</p>
+                
+                <form action="https://formspree.io/f/xovlewrb" method="post" class="rsvp-form">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="attendance">Will you be attending? *</label>
+                        <select id="attendance" name="attendance" required>
+                            <option value="">Please select...</option>
+                            <option value="yes">Yes, I'll be there! 🎉</option>
+    
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="wishlistItem">Have you chosen a wishlist item?</label>
+                        <small class="form-note">If you select an item, it will be marked as "bought" to ensure no duplicates.</small>
+                        <select id="wishlistItem" name="wishlistItem">
+                            <option value="bugatti-veyron">Bugatti Veyron Super Sport</option>
+                            <option value="ariel-atom">Ariel Atom V8</option>
+                            <option value="lamborghini-huracan">Lamborghini Huracán</option>
+                        </select>
+                        
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Special message (optional)</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Any birthday wishes or special notes..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="rsvp-button">Submit</button>
+                </form>
+            </section>
+
+            <section class="section wishlist-section">
+                <h1>Wishlist</h1>
+                <p>If you're feeling generous, here are a few things I've been dreaming about ):</p>
+                
+                <div class="wishlist">
+                    <div class="wishlist-item">
+                        <h3>Bugatti Veyron Super Sport</h3>
+                        <a href="https://www.bugatti.com/en/classic-icons/bugatti-veyron-super-sport" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>Ariel Atom V8</h3>
+                        <a href="https://www.arielmotor.co.uk/ariel-vehicles/ariel-atom/" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>Lamborghini Huracán</h3>
+                        <a href="https://www.lamborghini.com/en-en/models/huracan" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                </div>
+            </section>
+
+        <div class="contact">
+        <h1>Questions</h1>
+        <p>Have any questions about the party? Email: <a href="mailto:birthday@joshuachelashaw.com">birthday@joshuachelashaw.com</a></p>
+        </div>
+        </main>
+
+        <footer>
+
+
+            <div class="footer">
+                <p>&copy; 2025 Joshua Chelashaw</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            
+            // Handle different path scenarios
+            if (currentPath.includes('/resume/') && href.includes('resume')) {
+                link.classList.add('active');
+            } else if (currentPath.includes('/projects/') && href.includes('projects')) {
+                link.classList.add('active');
+            } else if (currentPath.includes('/placeholder/') && href.includes('placeholder')) {
+                link.classList.add('active');
+            } else if ((currentPath === '/' || currentPath === '/stu-jc.github.io/' || currentPath.endsWith('/index.html')) && 
+                       (href === './' || href === 'index.html')) {
+                // This is the home page
+                const homeLink = document.querySelector('.nav-title');
+                if (homeLink) homeLink.classList.add('active');
+            }
+        });
+    });
+    </script>
+</body>
+</html>

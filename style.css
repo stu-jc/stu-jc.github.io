@@ -482,3 +482,190 @@ a:hover {
         color: white;
     }
 }
+
+/* Birthday page styles */
+.birthday-hero {
+    text-align: center;
+    margin-bottom: var(--space-3xl);
+    padding: var(--space-2xl) 0;
+}
+
+.birthday-hero h1 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--space-md);
+    color: var(--color-accent);
+}
+
+.birthday-hero h2 {
+    font-size: var(--font-size-2xl);
+    margin: 0 0 var(--space-lg) 0;
+    color: var(--color-text-primary);
+}
+
+.birthday-description {
+    font-size: var(--font-size-large);
+    color: var(--color-text-secondary);
+    max-width: 32rem;
+    margin: 0 auto;
+}
+
+/* RSVP Form styles */
+.rsvp-section {
+    background: rgba(0, 102, 204, 0.03);
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: var(--space-2xl);
+    margin-bottom: var(--space-3xl);
+}
+
+.rsvp-form {
+    max-width: 35rem;
+    margin: var(--space-xl) 0 0 0;
+}
+
+.form-group {
+    margin-bottom: var(--space-lg);
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: var(--space-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: var(--space-md);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-family: var(--font-family-system);
+    font-size: var(--font-size-base);
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+    transition: border-color var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.1);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 4rem;
+}
+
+.rsvp-button {
+    background-color: var(--color-accent);
+    color: white;
+    padding: var(--space-md) var(--space-xl);
+    border: none;
+    border-radius: 4px;
+    font-family: var(--font-family-system);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+    width: 100%;
+}
+
+.rsvp-button:hover {
+    background-color: var(--color-accent-hover);
+    transform: translateY(-1px);
+}
+
+.rsvp-button:active {
+    transform: translateY(0);
+}
+
+/* Wishlist styles */
+.wishlist-section {
+    border-top: 1px solid var(--color-border);
+    padding-top: var(--space-2xl);
+}
+
+.wishlist {
+    display: grid;
+    gap: var(--space-xl);
+    margin: var(--space-xl) 0;
+}
+
+.wishlist-item {
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    padding: var(--space-xl);
+    background: rgba(250, 250, 250, 0.5);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.wishlist-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.wishlist-item h3 {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    margin: 0 0 var(--space-sm) 0;
+}
+
+.wishlist-item p {
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-md);
+}
+
+.wishlist-link {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: white;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    transition: background-color var(--transition-fast);
+}
+
+.wishlist-link:hover {
+    background-color: var(--color-accent-hover);
+    color: white;
+}
+
+.wishlist-note {
+    font-style: italic;
+    text-align: center;
+    margin-top: var(--space-xl);
+    padding: var(--space-lg);
+    background: rgba(0, 102, 204, 0.05);
+    border-radius: 4px;
+    color: var(--color-text-secondary);
+}
+
+/* Responsive adjustments for birthday page */
+@media (max-width: 37.5em) {
+    .birthday-hero {
+        padding: var(--space-xl) 0;
+    }
+    
+    .birthday-hero h1 {
+        font-size: var(--font-size-2xl);
+    }
+    
+    .birthday-hero h2 {
+        font-size: var(--font-size-xl);
+    }
+    
+    .rsvp-section {
+        padding: var(--space-xl);
+    }
+    
+    .wishlist-item {
+        padding: var(--space-lg);
+    }
+}
