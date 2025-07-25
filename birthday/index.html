@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joshua Chelashaw</title>
+    <title>joshua's birthday cookout</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../style.css">
 </head>
@@ -44,6 +44,15 @@
                         <label for="lastName">Last Name *</label>
                         <input type="text" id="lastName" name="lastName" required>
                     </div>
+
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required 
+                               pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                               title="Please enter a valid email address"
+                               placeholder="example@joshuachelashaw.com">
+                        <small class="email-error" style="color: #ff6b6b; display: none;">Please enter a valid email address</small>
+                    </div>
                     
                     <div class="form-group">
                         <label for="attendance">Will you be attending? *</label>
@@ -56,12 +65,35 @@
                     
                     <div class="form-group">
                         <label for="wishlistItem">Have you chosen a wishlist item?</label>
-                        <small class="form-note">If you select an item, it will be marked as "bought" to ensure no duplicates.</small>
+                        <small class="form-note">If you select an item, it will be marked as "bought" to ensure no duplicates.
+                        
+                            **Your name is not attached to the item, so Josh will not know who bought it. :)
+                        </small>
                         <select id="wishlistItem" name="wishlistItem">
                             <option value="">Please select...</option>
-                            <option value="bugatti-veyron">Bugatti Veyron Super Sport</option>
-                            <option value="ariel-atom">Ariel Atom V8</option>
-                            <option value="lamborghini-huracan">Lamborghini Huracán</option>
+                            <option value="skydive-tickets">Skydive Tickets</option>
+                            <option value="insta360-camera">Insta360 X5 8K 360 Action Camera Essentials Bundle</option>
+                            <option value="kanye-vinyl">KANYE WEST 'My Beautiful Dark Twisted Fantasy' Vinyl</option>
+                            <option value="madvillain-vinyl">MADVILLAIN - Madvillainy</option>
+                            <option value="flower-boy-vinyl">Flower Boy Vinyl</option>
+                            <option value="dave-psychodrama">DAVE- Psychodrama</option>
+                            <option value="jbl-speaker">JBL Charge 5 Bluetooth Portable Speaker</option>
+                            <option value="loop-earplugs">Loop Earplugs</option>
+                            <option value="wallet">Wallet</option>
+                            <option value="kindle">Kindle</option>
+                            <option value="nike-shoes">Nike's</option>
+                            <option value="water-bottle">Water Bottle</option>
+                            <option value="katana">Katana</option>
+                            <option value="t-shirt">T shirt</option>
+                            <option value="beanie">Beanie</option>
+                            <option value="apricity-singlet">Apricity Singlet</option>
+                            <option value="apricity-sweatshirt">Apricity Sweatshirt</option>
+                            <option value="justified-longsleeve">Justified Long-sleeve tee</option>
+                            <option value="wave-cap">Wave Cap</option>
+                            <option value="weighted-vest">Weighted Vest</option>
+                            <option value="astroworld-vinyl">Astroworld Vinyl</option>
+                            <option value="cmiygl-vinyl">CMIYGL Vinyl</option>
+                            <option value="birds-trap-vinyl">Birds in the Trap Vinyl</option>
                         </select>
                         
                     </div>
@@ -80,19 +112,132 @@
                 <p>If you're feeling generous, here are a few things I've been dreaming about ):</p>
                 
                 <div class="wishlist">
-                    <div class="wishlist-item">
+                    <div class="wishlist-item reserved">
                         <h3>Bugatti Veyron Super Sport</h3>
-                        <a href="https://www.bugatti.com/en/classic-icons/bugatti-veyron-super-sport" target="_blank" class="wishlist-link">View Details</a>
                     </div>
                     
-                    <div class="wishlist-item">
+                    <div class="wishlist-item reserved">
                         <h3>Ariel Atom V8</h3>
-                        <a href="https://www.arielmotor.co.uk/ariel-vehicles/ariel-atom/" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item reserved">
+                        <h3>Lamborghini Huracán</h3>
+                        
                     </div>
                     
                     <div class="wishlist-item">
-                        <h3>Lamborghini Huracán</h3>
-                        <a href="https://www.lamborghini.com/en-en/models/huracan" target="_blank" class="wishlist-link">View Details</a>
+                        <h3>Skydive Tickets</h3>
+                        <a href="https://cart.skydive.com.au/giftvoucher/add/1156" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>Insta360 X5 8K 360 Action Camera Essentials Bundle</h3>
+                        <a href="https://www.jbhifi.com.au/products/insta360-x5-8k-360-action-camera-essentials-bundle" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>KANYE WEST 'My Beautiful Dark Twisted Fantasy' Vinyl</h3>
+                        <a href="https://www.goldminerecords.com.au/products/kanye-west-my-beautiful-dark-twisted-fantasy-vinyl-3lp" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>MADVILLAIN - Madvillainy</h3>
+                        <a href="https://www.thevinylstore.com.au/product/madvillain-madvillainy-2lp-set/" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>Flower Boy Vinyl</h3>
+                        <a href="https://www.dicksmith.com.au/da/buy/mighty-ape-flower-boy-35025158/?gad_campaignid=21930529154" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>DAVE- Psychodrama 2 (Blue Vinyl)</h3>
+                        <a href="https://www.ebay.com.au/itm/387166037245" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>JBL Charge 5 Bluetooth Portable Speaker (Black)</h3>
+                        <a href="https://www.jbhifi.com.au/products/jbl-charge-5-bluetooth-portable-speaker-black" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>Loop Earplugs</h3>
+                        <a href="https://au.loopearplugs.com/products/experience?variant=47951800009042&gQT=1" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>Wallet</h3>
+                        <a href="https://bellroy.com/products/hide-and-seek-wallet?color=night_forest&material=leather_rfid&size=lo#slide-1" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>Kindle</h3>
+                        <a href="https://www.amazon.com.au/dp/B0CFPL6CFY" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>Nike's</h3>
+                        <a href="https://www.goat.com/en-au/sneakers/waffle-trainer-2-first-use-green-noise-dh4390-300" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>Water Bottle</h3>
+                        <a href="https://projectpargo.com/products/750ml-insulated-sports-bottle?variant=41897979707435" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>Katana</h3>
+                        <a href="https://www.katanaswordart.com.au/products/katana-jinghong-manganese-steel-red-blade" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>T shirt</h3>
+                        <a href="https://bteamjj.shop/products/natty-king-rashguard" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>Beanie</h3>
+                        <a href="https://www.kathmandu.com.au/products/core-spun-165-beanie-black?size=S/M" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>Apricity Singlet</h3>
+                        <a href="https://www.apricitythelabel.com/products/men-s-singlet?variant=45185364984061" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>Apricity Sweatshirt</h3>
+                        <a href="https://www.apricitythelabel.com/products/unisex-sweatshirt" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>Justified Long-sleeve tee</h3>
+                        <a href="https://justifiedcollective.com/shop/p/justified-longsleeve-tee" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>Wave Cap</h3>
+                        <a href="https://justifiedcollective.com/shop/p/justifie-wave-caps" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>Weighted Vest</h3>
+                        <a href="https://www.amazon.com/ZELUS-Weighted-Reflective-Strength-Weightlifting/dp/B07518RBH2/" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>Astroworld Vinyl</h3>
+                        <a href="https://www.thevinylstore.com.au/product/travis-scott-astroworld-2lp-set/" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>CMIYGL Vinyl</h3>
+                        <a href="https://www.thevinylstore.com.au/product/tyler-the-creator-call-me-if-you-get-lost-2lp-set-gatefold/" target="_blank" class="wishlist-link">View Details</a>
+                    </div>
+                    
+                    <div class="wishlist-item">
+                        <h3>Birds in the Trap Vinyl</h3>
+                        <a href="https://www.amazon.com.au/Birds-Trap-Sing-Mcknight-150G/dp/B01M24IIYQ" target="_blank" class="wishlist-link">View Details</a>
                     </div>
                 </div>
             </section>
@@ -132,6 +277,49 @@
                 // This is the home page
                 const homeLink = document.querySelector('.nav-title');
                 if (homeLink) homeLink.classList.add('active');
+            }
+        });
+
+        // Email validation
+        const emailInput = document.getElementById('email');
+        const emailError = document.querySelector('.email-error');
+        
+        function validateEmail(email) {
+            const emailRegex = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i;
+            return emailRegex.test(email);
+        }
+        
+        function showEmailError(show) {
+            if (emailError) {
+                emailError.style.display = show ? 'block' : 'none';
+            }
+            emailInput.style.borderColor = show ? '#ff6b6b' : '';
+        }
+        
+        emailInput.addEventListener('input', function() {
+            const email = this.value.trim();
+            if (email && !validateEmail(email)) {
+                showEmailError(true);
+            } else {
+                showEmailError(false);
+            }
+        });
+        
+        emailInput.addEventListener('blur', function() {
+            const email = this.value.trim();
+            if (email && !validateEmail(email)) {
+                showEmailError(true);
+            }
+        });
+        
+        // Form submission validation
+        const form = document.querySelector('.rsvp-form');
+        form.addEventListener('submit', function(e) {
+            const email = emailInput.value.trim();
+            if (!validateEmail(email)) {
+                e.preventDefault();
+                showEmailError(true);
+                emailInput.focus();
             }
         });
     });
