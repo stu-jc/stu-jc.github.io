@@ -74,7 +74,7 @@
                             <option value="">Gifting as a group</option>
                             <option value="">No gift</option>
                             <option value="skydive-tickets">Skydive Tickets</option>
-                            <option value="insta360-camera">Insta360 X5 8K 360 Action Camera Essentials Bundle</option>
+                            <option value="insta360-camera">Insta360 X5 Bundle</option>
                             <option value="kanye-vinyl">KANYE WEST 'My Beautiful Dark Twisted Fantasy' Vinyl</option>
                             <option value="madvillain-vinyl">MADVILLAIN - Madvillainy</option>
                             <option value="flower-boy-vinyl">Flower Boy Vinyl</option>
@@ -84,11 +84,11 @@
                             <option value="kindle">Kindle</option>
                             <option value="nike-shoes">Nike's</option>
                             <option value="water-bottle">Water Bottle</option>
-                            <option value="t-shirt">T shirt</option>
+                            <option value="t-shirt">T-shirt</option>
                             <option value="beanie">Beanie</option>
                             <option value="apricity-singlet">Apricity Singlet</option>
                             <option value="apricity-sweatshirt">Apricity Sweatshirt</option>
-                            <option value="justified-longsleeve">Justified Long-sleeve tee</option>
+                            <option value="justified-longsleeve">Justified Long-Sleeve Tee</option>
                             <option value="weighted-vest">Weighted Vest</option>
                             <option value="astroworld-vinyl">Astroworld Vinyl</option>
                             <option value="astroworld-vinyl">NB Running Shoes</option>
@@ -132,7 +132,7 @@
                     </div>
                     
                     <div class="wishlist-item">
-                        <h3>Insta360 X5 8K 360 Action Camera Essentials Bundle</h3>
+                        <h3>Insta360 X5 Bundle</h3>
                         <a href="https://www.jbhifi.com.au/products/insta360-x5-8k-360-action-camera-essentials-bundle" target="_blank" class="wishlist-link">View Details</a>
                     </div>
                     
@@ -191,7 +191,7 @@
                     </div>
                     
                     <div class="wishlist-item">
-                        <h3>T shirt</h3>
+                        <h3>T-shirt</h3>
                         <a href="https://bteamjj.shop/products/natty-king-rashguard" target="_blank" class="wishlist-link">View Details</a>
                     </div>
                     
@@ -211,7 +211,7 @@
                     </div>
                     
                     <div class="wishlist-item">
-                        <h3>Justified Long-sleeve tee</h3>
+                        <h3>Justified Long-Sleeve Tee</h3>
                         <a href="https://justifiedcollective.com/shop/p/justified-longsleeve-tee" target="_blank" class="wishlist-link">View Details</a>
                     </div>
                     
@@ -266,27 +266,6 @@
 
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const currentPath = window.location.pathname;
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        navLinks.forEach(link => {
-            const href = link.getAttribute('href');
-            
-            // Handle different path scenarios
-            if (currentPath.includes('/resume/') && href.includes('resume')) {
-                link.classList.add('active');
-            } else if (currentPath.includes('/projects/') && href.includes('projects')) {
-                link.classList.add('active');
-            } else if (currentPath.includes('/placeholder/') && href.includes('placeholder')) {
-                link.classList.add('active');
-            } else if ((currentPath === '/' || currentPath === '/stu-jc.github.io/' || currentPath.endsWith('/index.html')) && 
-                       (href === './' || href === 'index.html')) {
-                // This is the home page
-                const homeLink = document.querySelector('.nav-title');
-                if (homeLink) homeLink.classList.add('active');
-            }
-        });
-
         // Email validation
         const emailInput = document.getElementById('email');
         const emailError = document.querySelector('.email-error');
