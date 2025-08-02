@@ -16,6 +16,7 @@
                 <a href="https://github.com/stu-jc" class="nav-link">Github</a>
                 <a href="resume/" class="nav-link">Resume</a> 
                 <a href="projects/" class="nav-link">Projects</a>
+                <a href="art/" class="nav-link">Art</a>
                 <a href="placeholder/" class="nav-link">Blog</a>
                 <a href="mailto:me@joshuachelashaw.com" class="nav-link">Email</a> 
                 <a href="https://linkedin.com/in/joshuachelashaw" class="nav-link">LinkedIn</a>
@@ -89,6 +90,8 @@
             if (currentPath.includes('/resume/') && href.includes('resume')) {
                 link.classList.add('active');
             } else if (currentPath.includes('/projects/') && href.includes('projects')) {
+                link.classList.add('active');
+            } else if (currentPath.includes('/art/') && href.includes('art')) {
                 link.classList.add('active');
             } else if (currentPath.includes('/placeholder/') && href.includes('placeholder')) {
                 link.classList.add('active');

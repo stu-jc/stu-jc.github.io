@@ -1,0 +1,230 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables for Theme Colors */
+:root {
+    /* Light Mode Colors */
+    --bg-primary: #ffffff;
+    --text-primary: #000000;
+    --border-color: #000000;
+}
+
+/* Dark Mode Colors */
+.dark-mode {
+    --bg-primary: #000000;
+    --text-primary: #ffffff;
+    --border-color: #ffffff;
+}
+
+/* Typography */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3 {
+    color: var(--text-primary);
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+p {
+    color: var(--text-primary);
+    margin: 0;
+}
+
+a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+
+/* Art Hero Section */
+.art-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.art-hero h1 {
+    font-size: 3rem;
+}
+
+.nav-section {
+    display: flex;
+    align-items: flex-start;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-end;
+}
+
+.nav-link {
+    color: var(--text-primary);
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.theme-toggle {
+    margin: 0;
+}
+
+.theme-toggle-btn {
+    background: none;
+    border: 1px solid var(--border-color);
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    color: var(--text-primary);
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.theme-text {
+    display: block;
+}
+
+.light-text {
+    display: none;
+}
+
+.dark-text {
+    display: block;
+}
+
+/* Gallery Grid */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.art-piece {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+}
+
+.art-placeholder {
+    padding: 1rem;
+    text-align: left;
+}
+
+.art-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.art-placeholder h3 {
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.art-placeholder .price {
+    color: var(--text-primary);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid var(--border-color);
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+.footer {
+    text-align: left;
+}
+
+.footer p {
+    color: var(--text-primary);
+    font-size: 0.8rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .art-hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .nav-section {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .nav-links {
+        flex-direction: row;
+        gap: 1rem;
+        align-items: flex-start;
+    }
+    
+    .art-hero h1 {
+        font-size: 2rem;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .art-hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .art-image {
+        height: 150px;
+    }
+}

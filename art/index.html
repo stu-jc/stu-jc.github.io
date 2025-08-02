@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art - Joshua Chelashaw</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <main>
+            <section class="art-hero">
+                <h1>Art</h1>
+                <div class="nav-section">
+                    <div class="nav-links">
+                        <a href="../" class="nav-link">Home</a>
+                        <a href="../placeholder/" class="nav-link">Blog</a>
+                        <a href="mailto:art@joshuachelashaw.com" class="nav-link">Contact</a>
+                        <div class="theme-toggle">
+                            <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+                                <span class="theme-text light-text">Light</span>
+                                <span class="theme-text dark-text">Dark</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="gallery-grid">
+                    <div class="art-piece">
+                        <div class="art-placeholder">
+                            <img src="../images/img1.jpeg" alt="one" class="art-image">
+                            <h3>one</h3>
+                            <p class="price">$15,750,000</p>
+                        </div>
+                    </div>
+                    
+                    <div class="art-piece">
+                        <div class="art-placeholder">
+                            <img src="../images/img1.jpeg" alt="two" class="art-image">
+                            <h3>two</h3>
+                            <p class="price">$22,500,000</p>
+                        </div>
+                    </div>
+                    
+                    <div class="art-piece">
+                        <div class="art-placeholder">
+                            <img src="../images/img1.jpeg" alt="three" class="art-image">
+                            <h3>three</h3>
+                            <p class="price">$18,200,000</p>
+                        </div>
+                    </div>
+                    
+                    <div class="art-piece">
+                        <div class="art-placeholder">
+                            <img src="../images/img1.jpeg" alt="four" class="art-image">
+                            <h3>four</h3>
+                            <p class="price">$30,000,000</p>
+                        </div>
+                    </div>
+                    
+                    <div class="art-piece">
+                        <div class="art-placeholder">
+                            <img src="../images/img1.jpeg" alt="five" class="art-image">
+                            <h3>five</h3>
+                            <p class="price">$12,750,000</p>
+                        </div>
+                    </div>
+                    
+                    <div class="art-piece">
+                        <div class="art-placeholder">
+                            <img src="../images/img1.jpeg" alt="six" class="art-image">
+                            <h3>six</h3>
+                            <p class="price">$45,000,000</p>
+                        </div>
+                    </div>
+                    
+                    <div class="art-piece">
+                        <div class="art-placeholder">
+                            <img src="../images/img1.jpeg" alt="seven" class="art-image">
+                            <h3>seven</h3>
+                            <p class="price">$27,850,000</p>
+                        </div>
+                    </div>
+                    
+                    <div class="art-piece">
+                        <div class="art-placeholder">
+                            <img src="../images/img1.jpeg" alt="eight" class="art-image">
+                            <h3>eight</h3>
+                            <p class="price">$11,900,000</p>
+                        </div>
+                    </div>
+                    
+                    <div class="art-piece">
+                        <div class="art-placeholder">
+                            <img src="../images/img1.jpeg" alt="nine" class="art-image">
+                            <h3>nine</h3>
+                            <p class="price">$38,400,000</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="footer">
+                <p>&copy; 2025 Joshua Chelashaw</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const themeToggle = document.getElementById('themeToggle');
+            const body = document.body;
+            const lightText = document.querySelector('.light-text');
+            const darkText = document.querySelector('.dark-text');
+            
+            // Check for saved theme preference or default to 'light'
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            body.classList.add(currentTheme + '-mode');
+            
+            // Update text visibility based on current theme
+            function updateThemeText(theme) {
+                if (theme === 'dark') {
+                    lightText.style.display = 'block';
+                    darkText.style.display = 'none';
+                } else {
+                    lightText.style.display = 'none';
+                    darkText.style.display = 'block';
+                }
+            }
+            
+            // Initial setup
+            updateThemeText(currentTheme);
+            
+            // Theme toggle functionality
+            themeToggle.addEventListener('click', function() {
+                if (body.classList.contains('light-mode')) {
+                    body.classList.remove('light-mode');
+                    body.classList.add('dark-mode');
+                    updateThemeText('dark');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    body.classList.remove('dark-mode');
+                    body.classList.add('light-mode');
+                    updateThemeText('light');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+
+            // Navigation active state
+            const currentPath = window.location.pathname;
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                
+                if (currentPath.includes('/art/') && href.includes('art')) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
